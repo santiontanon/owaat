@@ -1,0 +1,350 @@
+From: AAAI Technical Report FS-99-01. Compilation copyright © 1999, AAAI (www.aaai.org). All rights reserved.
+
+Notes on the Use of Plan Structures in the Creation of Interactive
+
+Plot
+
+R. Michael
+Young
+Department of Computer Science
+North Carolina State University
+Raleigh, NC27695-7534
+young@csc.nesu.edu
+
+of Narrative
+for Interactive
+Systems
+An interactive system defines a virtual space, whether
+the system’s interface provides access to the inhospitable planet of Stroggos or the Microsoft Windows
+desktop. Users of both these systems interact with a
+place, one created by a computer and in which users
+and computational agents carry out their individual and
+collective activities. The intuitive and often-discussed
+benefit of a well-designed interface metaphoris that it
+allows users to carry over conventions from their "real"
+experience when performing tasks within the interface
+world.
+Another key and often unarticulated value of an
+interface arises from the interface’s mimetic quality.
+While mimesisis often discussed by narrative theorists
+as a contrast to diegesis, distinguishing the concepts of
+showing versus telling (Aristotle), myemphasis here
+is to distinguish between an artifact that is intended
+to be an imitation of something, but is not really that
+thing and an artifact that is intended to be mistaken as
+that thing. An example of the former case would be a
+film of a fictional account of the D-Daylanding on the
+beaches of Normandy. An example of the later might
+be a virtual reality system displaying photo-realistic
+graphical imagesof a physical space. D-Daystories like
+The Longest Day and Saving Private Ryan are, in some
+ways, imitations, and so are more mimetic than VRsystems whosedesign is intended to "...produce synthetic
+images visually and measurably indistinguishable from
+real world images." (Greenberg 1999)(pg. 45).
+The interface to a virtual space presents an abstracted, artificial representation of a world and the
+activities within it; it is the mimeticcharacter of the
+space, together with our understanding that we are interacting with a mimetic artiflcat, that allows us as
+users to bring to bear all our knowledgeof narrative
+understanding during our interaction (Brannigan 1992).
+Whena user enters into a such a virtual space, it is as
+if a narrative contract is established betweenthe user
+and the system’s authors. 1 The contract establishes
+
+the expectation that the system will obey certain narrative conventions. In this way, the contract is beneficial to both designer and user. It facilitates the user’s
+comprehensionby licensing interpretation of experience
+within the system’s interface in ways that would not
+otherwise be open. It provides the designer with useful constrains on the system’s performance, delivering
+a ready-made vocabulary from which the designer constructs the events that occur in the virtual world. In
+manyways, this narrative contract functions similarly
+to Grice’s Cooperative Principle (Grice 1957).
+It is the interactive character of the interface that
+contributes most strongly to the creation of a sense
+of narrative in its use (Reeves & Nass 1996), and the
+mediated nature of this interaction provides the hook
+needed to integrate intelligent systems into narrativebased computer programs. From the graphical rendering of the world to the execution of the simplest of user
+actions, all aspects of a user’s activity with interactive
+systemare controlled (or at least, they’re controllable).
+Somesystem designs maychose to abdicate control to
+the user or pass over muchof the mediation that might
+take place. For interactive systems, mediation provides
+the fulcrum on which to leverage the power of a computational modelof narrative.
+In this extended abstract I describe a particular approach to the computational modeling of plot as described by narrative theorists. This modelextends techniques from recent approaches to AI planning (Young,
+Pollack, ~ Moore 1994) -- particularly the combined
+representation of the causal and hierarchical structure
+of plans and the methods by which the plans are constructed -- to capture key features of narrative structure. Below, I provide two short discussions with exampies of howthese models of plans and planning can be
+used to create interactive, plot-based narrative experiences. First, I sketch briefly howa plan-based representation can be used to share control of plot flow between
+a user and an interactive system. Then I discuss a technique for modeling the suspense experienced by a user
+while experiencing an unfolding plot.
+
+1 See a compellingand muchmoreextensive discussion by
+KendalWaltonon the role of mimesisand its relationship
+
+to make-belleve(Walton1990).
+
+Models
+
+164
+
+Reasoning
+
+About
+
+Actions
+in Plots
+and
+Plans
+Adopting a model of plot
+In our work in the Liquid Narrative research group
+at North Carolina State University, we are developing computational models of the narrative structure
+described by narrative theorists such as Bal (1997),
+Rimmon-Keenan (1983), Ryan (1991) and others.
+While particular frameworksfor representing narrative
+vary from individual to individual, in manymodels,
+narrative structure is characterized hierarchically. At
+the lowest level is the fabula, consisting of the agents
+that populate a story world, along with the actions that
+these agents perform and the causal and temporal relationships between them. The next level, that of the
+story, consists of a subset of the events in the fabula
+to be conveyedto the reader, with a particular ordering imposedon this subset indicating the order of the
+telling. The final level is the level of the text, in which
+the story elements are realized in a particular medium
+(e.g text, film) for communicationto the reader.
+A model of plot as plan
+Agents, actions and their causal relationships are not
+new to Artificial Intelligence. These notions are the
+stuff that makes up most representational schemes in
+planning research. The idea that plans might be put to
+use to represent plot is also not new (Schank3z Abelson
+1977). However,the planning representations that have
+previously been used to represent plot have roughly
+been based on early, ad hoc modelsof plans (Sacerdoti
+1977). As a result, aspects of narrative in these systems
+reflected the representational limitations of the underlying plan structure.
+Our work employs recent models of plans and planning from AI to represent the hierarchical and causal
+nature of narratives identified by narrative theorists.
+Specifically, we are using a modelof planning that differs from others previously used in narrative contexts
+in at least two ways. First, the plan representation
+that we employcontains a rich, formal representation
+of the causal structure of a plan. Each causal dependency betweengoal, precondition and effect in the plan
+is carefully delineated during plan construction. Second, the plan construction process we use is one of
+search through the space of all possible plans rather
+than the incremental construction of a single plan. Consequently, the systemcan characterize a plan relative to
+the broader context in which it occurs. As I describe
+below, both of these features can be used to create and
+maintain narrative structure in an interactive system.
+An AI Architecture
+for an Interactive
+Narrative
+System
+In the type of interactive narrative system we envision,
+a user performsactivities within a virtual space, either
+singly or with other users and/or computational agents.
+
+165
+
+The application maybe explicitly story-oriented or not,
+but in either case interaction within the environment
+is structured as a narrative. To achieve this type of
+interaction, the system uses the following components:
+* A declarative representation for action within the
+environment. This may appear in annotations
+to virtual worlds suggested by Doyle and HayesRoth (1998), specifically targeted at the representational level required to piece together plot using
+plan-based techniques described in (B).
+* A programthat can use this representation to create,
+modify and maintain narrative-structured plans for
+interaction with the environment. The plans represent the activities of users, system-controlled agents
+and the environmentitself.
+This program consists of two parts: an AI planning
+algorithm and an execution monitoring component.
+The planning algorithm forms plans for user and
+system interaction that contain such interesting and
+compellingnarrative structure as rising action, balanced conflict between protagonist and antagonist,
+suspense and foreshadowing. The execution monitor
+detects user activities that deviate from the planned
+narrative and decides how to respond. The response
+might take the form of re-planning the narrative by
+modifying the unexperienced portions of the narrative plan, or it might take the form of system intervention in the virtual world by preventing the user’s
+deviation from the current plan structure.
+* A theory capable of characterizing plans based on
+their narrative aspects. This theory informs the program in (B) above, guiding the construction of plans
+whose local and global structure are mappedinto the
+narrative structures of conflict, suspense, etc.
+In the following two examples, I suggest ways that
+plan representations can be used 1) to detect and respond appropriately to a user’s deviation from a given
+plot line and 2) to characterize plans in terms of their
+narrative features.
+Exploiting
+Plan Structure
+to Share
+Control
+in Narrative
+Environments
+For the designer of a narrative-oriented system that allows substantive user interaction, the greatest design
+challenge revolves aroundthe distribution of control between the system and its users. If a design removesall
+control from the user, the resulting systemis reduced to
+conventional narrative forms such as literature or film.
+If a design provides the user with complete control, the
+narrative coherence of a user’s interaction is limited by
+her ownknowledgeand abilities.
+Most interactive narrative-based systems have taken
+a middle ground, specifying at design-time sets of actions from which the user can choose at a fixed set of
+points through a narrative. The resulting collection of
+narrative paths is structured so that each path provides
+the user with an interesting narrative experience. This
+
+approach, of course, limits the numberand type of stories that can be told.
+Our approach is to provide a mechanism by which
+narrative plans are generated at execution time, in response to user preferences and other contextual factors
+(e.g., other users~ unfolding narratives within the same
+virtual space). The plans we use contain a rich causal
+structure; all causal relationships betweensteps in the
+plans are specifically markedby data structures called
+causal links. To ensure that the plans are functionally
+correct, these links are originally added to a plan at
+construct.ion time. Weput them to use at execution
+time; in our system, when a user attempts to performs
+an action, the declarative representation of that action
+is checkedagainst the causal links present in the plan.
+If the successful completionof the user’s action poses a
+threat to any of the causal links, an exception is raised.
+Exceptions are dealt with in one of two ways. The
+most straightforward is via intervention. Because all
+of a user’s actions in the environmentare mediated, it
+is the system itself that determines whether an action
+succeeds or fails. Typically, the success or failure of
+an action within a virtual environment is determined
+by software that approximates the rules of the underlying story world (e.g., firing a railgun directly at
+Strogg Enforcer results in the Strogg’s timely death).
+However,whena user’s action would violate one of the
+narrative plan’s constraints, the system can intervene,
+causing the action to fail. In the Strogg example, this
+might be achieved by surrepticiously substituting an
+alternate action for execution, one in which the "natural" outcomeis consistent with the existing plan’s constraints. A railgun misfiring, for instance, or a shot
+that misses its mark by a hair’s width, preserve the apparent consistency of the user’s interaction while Mso
+maintaining the Enforcer’s presence in the storyworld.
+The second response to an exception is to adjust the
+narrative structure of the plan to accommodatethe
+new activity of the user. The resolution of the conflict caused by the exception may involve only minor
+restructuring of the plan, for instance, selecting a different but compatible location for an event when the
+user takes an unexpected turn down a new path. Alternatively, this mayinvolve more substantive changes
+to the plan, for instance, should a user stumble uponthe
+key to a mystery early in a narrative or unintentionally
+destroy a device required to rescue a narrative’s central
+character.
+There are, of course, manyopen research questions.
+Oneinvolves deciding between the two categories of response. If a system is constantly altering the narrative plan in response to user activities, interaction may
+reduce to one in which no narrative coherence exists.
+Alternatively, if user actions are constantly failing, the
+user’s illusion of control disappears and the immersive
+natural of the virtual world recedes. Similarly, knowing when and how to intervene or how to restructure
+a narrative plan are two central issues that are, as yet,
+unresolved.
+
+166
+
+Creating
+and Manipulating
+Suspense
+Recent work in cognitive psychology (Ohler & Nieding 1983; Gerrig & Bernardo 1994; Comisky & Bryant
+1982) has considered the role of narrative structure in
+the creation and maintenance of suspense in film and
+literature.
+Gerrig and Bernardo (1994) suggest that
+people whoread fiction act as problem-solvers, continuously looking for solutions to the plot-based dilemmas
+faced by the characters in a story world. This work indicates that a reader’s suspense is greater whenfewer
+solutions to the hero’s current problem can be found
+by the viewer. Weare currently developing a cognitive
+modelof a user’s plot-based reasoning that can be used
+to structure a user’s interaction to increase or decrease
+her feeling of suspenseat specific points in the interaction (~%ung1999).
+Our cognitive model employs the model of planning
+as search defined by Kambhampati
+et al (1995). In this
+approach, finding a solution to a planning problem involves search through a space of plans, represented as a
+directed graph. Nodesin this space represent (possibly
+partial) plans. Arcs from one node to another indicate that the second node is a refinement of the first,
+that is, that the plan represented by the second node
+is an incrementally more complete version of the plan
+at the first node. The root node of the graph contains
+the empty plan and the leaf nodes of the graph contain solution plans (i.e., complete plans that solve the
+planning problem).
+By characterizing the space of plans that a user might
+consider when solving problems faced by a protagonist
+at a given point in a plot, the model can makepredictions about the amount of suspense a user will experience at that point. The greater the numberof solution plans at the leaves of the graph, the less suspense
+the user is likely to experience. Moreinterestingly, the
+model can also be used to suggest ways to increase or
+decrease suspense by manipulating the knowledgeheld
+by the user about the state of the story world and the
+actions available within it. Weare currently implementing these ideas and plan to evaluate the validity of the
+approach empirically.
+The Role of Narrative
+in Our Research
+In the workwe are performing, narrative plays two central roles. The first is as the central target application.
+Aspects of narrative play a key role in learning, communication, social interaction, our arts and recreation.
+In our work, we seek to understand humaninteraction
+in these contexts and apply this understanding to the
+structure of human-computerinteraction designed to
+exploit our commonorientation towards narrative.
+Narrative, and more specifically narrative theory,
+plays a second role as the source for formal modelsthat
+can be adopted to characterize interaction in the contexts listed above. By adopting a cross-disciplinary approach, we gain access to the body of work on narrative
+that dates back to Aristotle. Further, we provide col-
+
+laborators in narrative theory with computational tools
+for modelingnarrative interactions that have previously
+been unavailable to them and in return they provide
+critical feedback and analysis of our efforts that prove
+essential in refining our models.
+References
+Aristotle. Poetics.
+Bal, M. 1997. Narralology: Introduction to the Theory
+of Narrative. Toronto: University of Toronto Press.
+Brannigan, E. 1992. Narrative Comprehension and
+Film. NewYork: Routledge.
+Comisky, P., and Bryant, J. 1982. Factors involved
+in generating suspense. HumanCommunication Research 9(1):49-58.
+Doyle, P., and ttayes-Roth, B. 1998. Agents in annotated worlds. In Proceedings of the Second International Conference on AutonomousAgents.
+Gerrig, R., and Bernardo, D. 1994. Readers as
+problem-solvers in the experience of suspense. Poetics
+22:459-472.
+Greenberg, D. P. 1999. A frameworkfor realistic image
+synthesis. Communicationsof the ACM42(8):45-53.
+Grice, H. P. 1957. Meaning. Philosophical Review
+68:377-388.
+Kambhampati,S.; Knobloek, C.; and Qiang, Y. 1995.
+Planning as refinement search: a unified frameworkfor
+evaluating design tradeoffs in partial-order planning.
+Artificial Intelligence 76:167-238.
+Ohler, P., and Nieding, G. 1983. Cognitive modeling
+of suspense-inducing structures in films. In Vorderer,
+P.; Wulff, H.; and Friedrichsen, M., eds., Suspense:
+Conceptualizations, theoretical analyses and empirical
+ezplirations. Lawrence Erlbaum. 167-208.
+Reeves, B., and Nass, C. 1996. The Media Equation: HowPeople Treat Computers, Television, and
+NewMedia Like Real People and Places. Cambridge
+University Press.
+Rimmon-Keenan,S. 1983. Narrative Fiction: Contemporary Poetics. London: Routledge.
+Ryan, M. 1991. Possibe Worlds, Artificial Intelligence
+and .Narrative Theory. Bloomington, IN: Indiana University Press.
+Sacerdoti, E. D. 1977. A Structure for Plans and
+Behavior. Artificial Intelligence Series. NewYork, New
+York: Elsevier North-Holland, Inc.
+Schank, R. C., and Abelson, R. P. 1977. Scripts,
+Plans, Goals and Understanding. Hillsdale, NewJersey: Lawrence Erlbaum Associates.
+VCalton, K. 1990. Mimesis as Make-Believe: One the
+Foundation of the Representational Arts. Boston, MA:
+Harvard University Press.
+Young,R. M.; Pollack, M. E.; and Moore, J. D. 1994.
+Decompositionand causality in partial order planning.
+
+167
+
+In Proceedings of the SecondInternational Conference
+on AI and Planning Systems, 188-193.
+Young, R. M. 1999. Cognitive and computational
+models of suspense: Towardsthe automatic creation of
+suspense in interactive narratives. Paper presented at
+Interactive Frictions: The Conference Producedat the
+Pressure Point Between Theory and Practive: An International Conferenceon Interactive _Narrative, University of Southern California, Los Angeles, CA.
+
+

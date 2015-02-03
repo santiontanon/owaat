@@ -1,0 +1,775 @@
+Agency Play: Dimensions of Agency for Interactive Narrative Design
+D. Fox Harrell and Jichen Zhu
+Digital Media Program, School of Literature, Communication, and Culture
+Georgia Institute of Technology
+Atlanta, GA, USA
+{fox.harrell,jichen.zhu}@lcc.gatech.edu
+
+power to change, is this “false” illusion of control a mistake
+overlooked by the designers of the game?
+Digital media afford more active roles for users than traditional narrative forms in various ways. Murray (1998) identiﬁes this phenomenon of increased user agency and claims
+it as one foundational property of digital media. She also
+categorizes various ways in which user agency is externalized in interactive narrative works. Examples of user agency
+include spatial navigation, problem solving, incorporating
+gameplay actions within narratives, and traversing links in
+hypertext narrative. Murray’s theory has inﬂuenced many
+practitioners who set out to explore new narrative possibilities brought by digital media in which agency plays an important part. However, many attempts have been based on an
+overly simpliﬁed understanding of agency, that is, agency as
+free will of players.
+Narrative-driven computer and console games comprise
+the forms of interactive narrative that currently seem to have
+most captured the popular consciousness (even if often sacriﬁcing narrative in favor of gaming conventions such as goalorientation, competition, winning/losing conditions, mechanisms to support these, and other strictly ludic elements).
+In these games, a sense of free will is often conveyed to the
+user by means of enabling robust forms of spatial navigation and interaction with objects in the game world. This
+construal of agency inevitably leads to an obsession with the
+idea that “the more agency, the better.” This phenomenon is
+exempliﬁed in notions such as “full reactive eyes entertainment” or F.R.E.E., a concept proposed by game designer Yu
+Suzuki during the development and marketing of the game
+Shenmue (Sega 2000), which aspired to allow a character to
+freely interact with every aspect of her environment. Yet,
+despite the high degree of free will to interact with objects
+in such a game, the slow pacing of its plot was consistently
+viewed as a detraction from the game, perhaps with the high
+degree of freedom detracting from meaningful narrative development, resulting in player boredom.
+Moving beyond the simpliﬁed model of agency in games
+such as discussed above, many interactive narrative researchers perceive a dilemma that has been termed the
+“narrative paradox,” in which the user’s free will to navigate in, and interact with, a virtual environment is positioned orthogonally to a system’s capacity to narratively
+structure the user’s experience. (Aylett & Louchart 2003;
+
+Abstract
+Agency in interactive narrative is often narrowly understood
+as a user’s freedom to either perform virtually embodied actions or alter the mechanics of narration at will, followed by
+an implicit assumption of “the more agency the better.” This
+paper takes notice of a broader range of agency phenomena
+in interactive narrative and gaming that may be addressed by
+integrating accounts of agency from diverse ﬁelds such as sociology of science, digital media studies, philosophy, and cultural theory. The upshot is that narrative agency is contextually situated, distributed between the player and system, and
+mediated through user interpretation of system behavior and
+system affordances for user actions. In our new and developing model of agency play, multiple dimensions of agency
+can be tuned during story execution as a narratively situated
+mechanism to convey meaning. More importantly, we propose that this model of variable dimensions of agency can be
+used as an expressive theoretical tool for interactive narrative
+design. Finally, we present our current interactive narrative
+work under development as a case study for how the agency
+play model can be deployed expressively.
+
+Keywords: agency play, user agency, system agency, interactive narrative, narrative theory
+
+Introduction
+You are playing a young brave warrior in a sparse landscape.
+In order to save a loved one, you must slay towering mythical behemoths, one after another. After slaying a creature by
+scaling it and plunging a sword into a tender point, the giant drops to its knees in melancholy slow motion. You run,
+jump this way and that, trying to avoid black veins of dark
+force rising from its body to seek you out. Inevitably, they
+pierce you and the world turns black ...
+The above paragraph describes a narrative scene from the
+console video game Shadow of the Colossus (Sony Computer Entertainment 2005). Some readers may wonder why
+the game design allows the player to perform actions immediately after slaying each monster when the resultant fall
+into blackness is unavoidable; after all, many games would
+use a pre-rendered, non-interactive cut-scene instead. Since
+the ending of this scene is pre-determined and beyond user’s
+Copyright c 2009, Association for the Advancement of Artiﬁcial
+Intelligence (www.aaai.org). All rights reserved.
+
+44
+
+Louchart & Aylett 2003) Many authors seek to provide techniques to balance the two sides of this paradox such as in
+(Cavazza, Charles, & Mead 2001) and (Young 2007). Indeed, some systems take this approach to the extreme, viewing the user’s free will as an existing in an adversarial relationship to the systems operation, e.g. Peter Weyrauch
+has proposed an adversarial search algorithm to address this
+problem. (Weyhrauch 1997)
+Yet, though these perspectives necessitate sophisticated
+means for moderating a user’s free will to act, such interactive narrative approaches still often seem to hold the
+holodeck as a holy grail and offering the user a sense of
+free will in a story world is still held as a goal. Thus, the
+trade-offs engineered in systems rooted in this perspective
+are meant to provide a sense of freedom of navigation and
+interaction, along with incentives and/or constraints forcing
+the user to submit to plot structures implemented in the story
+world. In these systems, agency, again considered as free
+will, is seen as something to be optimally balanced. Though
+free will orientation is not the only portrait of agency encountered in interactive narrative research (agency in the
+means of narration such as in hypertext ﬁction or camera
+control in virtual worlds are other important concerns), it is
+a major theme.
+In contrast, we propose to broaden and complicate the notion of agency in interactive narrative research. We hence
+emphasize that agency is mediated by (1) the full range of
+player actions possible, (2) the range of effects of player actions both in the story world and in the narration or presentation of the story, and the (3) the system’s capacity to constrain and modify the story world. Both player and system
+need to be taken into account as part of the discourse about
+agency play. The interplay and interdependence between
+the two seemingly oppositional concepts of user agency and
+system agency provides us a starting point to systematically
+describe a set of possibilities for deploying agency in interactive narrative media. We call this set of new possibilities
+agency play.
+The central argument of this paper is that “more is better models” of agency are outmoded, and solely free will
+oriented models in general should be expanded with an understanding of agency as an expressive resource that can be
+varied along many dimensions to result in meaningful and
+aesthetic effects in interactive narrative works. Formerly,
+such as in the heyday of hypertext ﬁction or adventure gaming, user agency was novel in the ability to traverse multiple
+paths through, or even become a character within, an interactive narrative work. Full player agency became a type of
+holy grail in the construction of interactive narrative works.
+However, the ﬁeld has matured beyond that stage, and the
+deployment of particular affordances for user agency is now
+a stylistic choice carefully manipulated over the course of a
+user’s experience to facilitate the goals of narrative system
+designers.
+To make this argument, the rest of the paper is organized
+as follows. The next section traces cross-disciplinary notions of agency from various ﬁelds, and proposes an understanding of user agency as situated in the context and goals
+of the narrative work at hand. Agency over some dimen-
+
+sions of control such as moving a player character (PC) can
+be pitted against agency in determining plot outcomes. The
+section “System Agency” discusses the agency of computational systems, emphasizing the ways in which it is inseparable from user agency. Next, the section “Agency Play”
+proposes our new model in which control over a broad set of
+possible dimensions of user and system interaction becomes
+a mechanism to convey meaning and express ideas. While
+there are an increasing number of works that accomplish just
+this, there has not to our knowledge been a systematic articulation of the range of expressive agency phenomena being
+explored by interactive narrative and game designers, and
+such phenomena have not been theorized sufﬁciently in a
+systematic way. Toward this end, we look at cases in interactive narrative media and in games with strong narratively
+structured content or rich story worlds. Finally, the section
+“Case Study” presents our current interactive narrative work
+under development as a demonstration of how our agency
+play model can be deployed expressively.
+
+A Situated Approach to Agency
+Long before being adopted in the digital media theory, apprehending the concept of agency has been a central challenge in various disciplines including philosophy and anthropology, as well as political activism and critical cultural
+theory. The focus here is addressing a set of theories that
+allows us to scrutinize user agency in relation to the digital
+technologies (computers, algorithms, etc) that go hand-inhand with it. The work of Andrew Pickering in the sociology
+of scientiﬁc knowledge inﬂuences us in its distinction between human and material agency, articulation of a “dance”
+between them, and focus upon a type of user agency as
+knowledge of how to perform manipulations in a particular
+conceptual system (e.g. how to perform elementary algebra
+manipulations). (Pickering 1995) The actor-network theory
+of Michel Callon and Bruno Latour has been inﬂuential in
+our practice in the way it incorporates both human and nonhuman actors. (Latour 1996) Furthermore, in her review
+of various accounts of agency, Laura M. Ahearn identiﬁes
+three major trends of which the concept has been conceptualized over the past few decades, namely “agency as free
+will”, “equating agency with resistance” and “the absence
+of agency”(Ahearn 2001). Although the prevailing view in
+the domain of interactive narrative aligns itself with the ﬁrst
+trend, the recent years have witnessed increasing number of
+experiments drawn on the other two accounts. At the end of
+this section, we propose an approach to agency that is situated in particular social and narrative contexts and lends
+itself to a range of expressive applications in interactive narrative works.
+
+A Dance of Agency
+Andrew Pickering focuses on a duality that he describes as
+existing between “human agency” and “material agency.”
+(Pickering 1995) Human agency centers upon the intentionality (aboutness) and actions taken by humans upon the
+world. In particular, as he is interested in the types of agency
+exhibited by scientists in the practice of knowledge production. He describes human disciplinary agency, recognizing
+
+45
+
+and knowing how to use/perform “a series of manipulations
+within an established conceptual system.” In contrast, Pickering also describes “material agency” as the idea that the
+world is “continually doing things, things that bear upon
+us not as disembodied intellects but as forces upon material beings.” It is a view that sees science as an array of
+forces that humans typically apprehend through the use of
+machines. Pickering deﬁnes a “dance of agency” as the process where humans attempt to apprehend the agency of the
+material world through the mediation of artifacts, and that
+material world both yields to, and resists, human apprehension. Despite his focus on scientiﬁc practice, the notion that
+there are symmetrical notions of human and material agency
+engaged in a dielectical dance parallels our constructs of human agency and system agency in AI and interactive narrative practices.
+
+The above examples refer to a user’s capacity to take actions and observe their results. As Ahearn reminds us, this
+capacity is deeply connected to what philosophers call action theory in that each of the above examples requires certain concomitant mental states, such as “intention” (Davidson 2001) and “presence of the self” (Segal 1991). As action
+theorist Segal puts it “[h]itting a ball is an action, falling
+down a ﬂight of stairs is not. A theory of action seeks,
+among other things, to explain the distinctions we make.”
+Increasingly powerful hardware and more robustly interactive software have allowed designers to explore the decisions users can make at will in forms unimaginable to earlyday developers. For example, in the Xbox game Star Wars:
+Knights of the Old Republic, the way a player controls her
+character through the story determines its moral disposition
+(whether it aligns with the light or dark side of the force),
+the set of new skills it can learn, as well as the branches of
+storyline which will be taken. (LucasArts 2003).
+However, an unchecked focus on free will may lead to
+unanticipated, and largely undesirable (though perhaps also
+transgressive) consequences. In massively multi-player online role-playing games (MMORPG), grief players perform
+actions not to advance game goals or for narratively oriented
+fulﬁllment, but to intentionally aggravate and harass other
+players. They kill other players, steal weapons and coins,
+and even form virtual maﬁa, all in the pursuit of their own
+enjoyment and free will version of “agency”.
+The example of griefers echoes Ahearn’s warning to us.
+“The main weakness in treating agency as a synonym for
+free will,” she argues, “is that such an approach ignores or
+only gives lip service to the social nature of agency and the
+pervasive inﬂuence of culture on human intentions, beliefs,
+and actions.” When adopted in the domain of interactive
+narrative, this pitfall often transforms into the over ampliﬁcation of users’ freedom to act however they want, while
+overlooking the importance of meaningful constraints and
+conditions in the context of the story.
+
+Actor-Network Theory
+One useful perspective on this dance of agency is provided
+by a sociological approach called Actor-Network Theory,
+which was initiated by Bruno Latour and Michel Callon in
+France in the 1980s (Latour 1996). Actor-network theory
+is used to examine socio-technical networks that are used to
+complete technical products. Responding to their own observations of the symmetrical nature of human and material
+agency noted above, actor-network theorists do not distinguish “human” and “non-human” actors from one another
+for most purposes, and uses the term “actant” to reﬂect this
+non-bias. The human actants in a network must perform
+acts of interpretation, which, in effect, are theories of the
+system’s functioning (Goguen 2003); researchers investigating domains involving both human and non-human actors
+such as AI-based interactive narrative should take this work
+very seriously. Understanding a parallel between the user
+agency enabled by the machine and the system agency that
+is constantly interpreted by humans is key to understanding
+the role, and nature, of agency in interactive narrative works.
+
+Agency as Resistance
+
+Agency as Free Will
+
+“Agency as resistance” characterizes many works in feminist
+theory and subaltern studies, in which traditions of social
+resistance of the past and present are called into attention.
+Many feminist theorists agree that, in order to demonstrate
+agency, a person must resist the hegemonic patriarchal status
+quo (Abu-Lughod 1990). This form of oppositional agency
+has gradually been adopted by some users/artists/hackers
+of digital worlds. In 1999 Sonya Roberts released her Female Skin Pack Excerpts, a series of female texture map for
+the original Quake avatars, because the game designers neglected to provide a female protagonist. The eerie composition of a female skin on a muscular male ﬁgure embodied a
+form of resistance to power.
+Oppositional agency also ﬁnds its way through the voices
+of “protesters” in virtual environment. Second Life users
+have successfully pressed their developer Linden Labs to
+alter the regulations in the Internet-based 3D virtual world
+in various cases, most prominently two events in 2003: a
+virtual tax revolt and agitation to allow people to retain IP
+rights. It is useful to include such notions of agency because
+
+The prevailing approach to user agency in interactive narrative systems treats the term as synonymous with users’
+free will. A straightforward example of such a treatment
+occurs in rhetoric of free spatial navigation, where a user is
+allowed to explore digital environments at will, without being bound to visit locations in an order predeﬁned by author.
+Such environments include map locations in video games
+or text-based interactive ﬁction (IF) labyrinths. In describing such environments, critics often describe possibilities of
+spatial exploration as cases of user agency. In articulating
+different categories of interactive narrative, literary theorist
+Marie-Laure Ryan captures this conception of agency in her
+description of works providing what she terms “internalexploratory interactivity.” (2001) She describes these as systems where “the user exercises her agency by moving around
+the ﬁctional world, picking up objects and looking at them,
+viewing the action from different points of view, investigating a case, and trying to reconstitute events that have taken
+place a long time ago.”
+
+46
+
+they relate user action to broader social, political, and cultural contexts both within and outside of the story worlds of
+particular interactive narrative (and related) systems.
+
+Situated Agency as an Expressive Tool for
+Interactive Narrative Design
+
+rather how the story is told. The use of agency is one of the
+channels for digital authors to express themselves.
+An equally expressive use is to limit or even temporarily eliminate user agency to convey a certain message, such
+as the sense of conﬁnement or helplessness. Such strategy
+nevertheless could be risky because historically the lack of
+agency, as freewill in particular, has been associated with the
+computational simplicity of the system or deﬁciency of the
+design. The use of cut-scenes in video games is a good example. For decades the game industry has incorporated cutscenes where user freedom is temporarily suspended. Although scholars have pointed out the narrative utility of noninteractive cut-scenes, e.g. to advance plot and introduce
+characters (Juul 2001), recent trends encourage designers to
+incorporate player interaction in these cut-scenes regardless
+of its content, for example in the introduction scene of Half
+Life 2. It is sometimes easy to forget that the power of narrative systems is to provide units of meaningful work, not
+mechanical interaction. (Bogost 2006) As we will argue in
+the rest of the paper, computational techniques can be used
+to tune user agency according to the story context.
+
+In light of the above, our notion of agency needs to reconcile valuable insights provided by the various perspectives
+on agency. Any unilateral deﬁnition of agency is inadequate.
+An actor’s agency is mediated through situated rules and resources. Structuration theory addresses such negotiation between social structures and human actions. Her actions are
+simultaneously constrained and enabled by the very social
+structures that those actions serve to reinforce or reconﬁgure
+(Giddens 1979; Ahearn 2001). As Ahearn proposes, agency
+refers to the socio-culturally mediated capacity to act. In
+digital environments, a user’s power to take meaningful actions is mediated through the structure provided by the computational system as well as the socially situated interpretation of actions rendered by the user. A system’s capacity to afford certain actions, impose certain constraints, and
+reward certain behaviors clearly has great effect on user’s
+agency. Even though games such as Shenmue are often accompanied by strong rhetoric that a player can do anything
+they like and their actions will impact the gameplay, the system structure imposes a strong value system that shapes the
+player’s agency, which, in turn, may reinforce or allow for
+critique of that structure. User agency is thus situated materially in the system affordances and interpretively in the
+context of use.
+User agency also provides an aesthetic experience and
+needs to be appropriate to its narrative context. A user’s
+capacity to act and make distinction does not necessarily entail narrative consistency. Fortunately, the area of interactive
+narrative is largely comprised of works that incorporate what
+Murray (1998) calls the balance between “dramatic structure” and “player freedom”(Mateas & Stern 2002; Harrell
+2006). Aspects of agency that have been commonly underexplored, however, include the ways that dynamically
+changing the scope, nature, and degree of user agency during execution can serve the expressive goals of an interactive
+narrative work. As a form of cultural production, interactive
+narratives are created by human authors to convey meaning.
+What is signiﬁcant sometimes is not what the story is, but
+
+As argued above, context is indispensable to the understanding of user agency in interactive narrative works since it simultaneously constrains and enables the nature and interpretation of user actions. Computational systems play a central
+role in establishing meaningful contexts in interactive narrative works, ranging from presenting hypermedia experiences
+of many electronic literature works, such as the lauded textbased animation “Dakota” (Young-hae Chang Heavy Industries 2002), to selecting story beats in Mateas and Stern’s
+interactive drama Fac¸ade. We refer to the capacity of the
+computational system to modify the story world and provide
+affordances for users actions as system agency (while understanding, following Callon and Latour, that this agency only
+exists in conjunction with the role of human actors).
+This paper is especially geared toward computational narrative systems that actively generate stories, story worlds,
+and/or dynamically alter elements of narration, using AI
+algorithmic and knowledge structuring approaches. Such
+systems embody a wide range of types of system agency
+that often fall into two categories, the second a subcategory
+of the ﬁrst: 1) system agency as narrative generation and
+constraint and 2) system agency as character control. The
+ﬁrst type refers to the capacity of system as the “narrator”
+and/or “author” to affect what the story is (narrative) and
+how the story is told (narration) through control of events
+and objects, and their presentation in the story world. Although computational narrative generation systems have traditionally focused on narrative presentation and structuring
+of events such as in (Meehan 1976), recent work such as
+(Montfort 2007) has emphasized more complex variation in
+the narration of stories. The second type is system’s capacity
+to control events through control of characters in the story,
+often computationally encoding both internal states and external behaviors of characters. This second type of system
+agency is the type often addressed in the ﬁeld area of believable agent design, and it is one that gives rise to the illusion
+
+Absence of Agency
+Another approach to agency is well articulated by Michel
+Foucault’s work on power (Foucault 1977; 1978). An extreme reading of Foucault is that omnipresent impersonal
+discourses so thoroughly pervade society that no room is left
+for anything that might be regarded as agency, oppositional
+or otherwise (Ahearn 2001). After playing some games produced by Ian Bogost’s company Persuasive Games, such as
+Airport Insecurity and Disaffected!, it is difﬁcult not to question the existence of agency, both inside the games and out,
+when a user is pushed to accomplish tasks either speciﬁed by
+game mechanics or more pervasive commercial bureaucracy
+and protocol in real life.
+
+System Agency
+
+47
+
+• Agency Relationship: User actions and system actions operate in relation to one another and can vary in relative
+magnitude and degree of dependency on one another (e.g.
+an inverse relationship or independent operation).
+• Agency Scope: Results of either user or system actions
+may have immediate and local impact (e.g. turning a character left or right) or longer term and less immediately
+apparent results (e.g. a series of actions may determine
+narrative structure itself).
+• Agency Dynamics: The relationship between possible
+user and system actions, and their scopes, can vary dynamically during runtime.
+• User Input Direction: The user may establish a pattern of
+input that directs agency dynamics and/or agency scope.
+
+UserInputDirection
+
+AgencyDynamics
+AgencyScope
+AgencyRelationship
+
+Figure 1: Dimensions of Agency; Arrows Indicate the Direction of Inﬂuence
+
+Figure 1 illustrates how the dimensions of agency relate
+to each other and how each dimension mediates the ones below it. The dimension of User Input Direction is separated
+graphically because it directs the deployment of effects of
+the levels below it, but is not itself constituted by the layers
+below it. These layers below are meant to provide a vocabulary for more precisely describing such varying types of
+agency, and how they can be manipulated toward expressive
+effects.
+
+of intentional agents acting in the story. As shown in the
+next section, when both user and system compete or collaborate in control of the same characters, a new range of
+opportunities are enabled to study and implement new ways
+of designing agency toward expressive and aesthetic ends.
+The notion of system agency leverages the discourse accompanying classic AI goals of building autonomous intelligent agents whose behaviors reveal human-like directedness
+toward the world. The term “system agency” does not imply, however, that we ascribe intentionality to computational
+systems themselves, or that a goal driving our framework is
+a dream of full system autonomy. System agency is a result
+of human interpretation in light of a set of situated social
+circumstances, not as a property intrinsic to a computational
+system itself. The term “system agency” provides shorthand
+to describe human interpretation of properties of the system
+behavior and capacity, speciﬁed by the story author and authoring system designer. More importantly, it suggests that
+system agency needs to be considered in parallel to human
+agency. We chose to name our construct describing the interaction between human and system agency agency play in
+order to call attention to the inseparable nature of the two
+concepts, as well as to sketch the possibility for skillful manipulation of the relationship and dynamics between them
+toward expressive ends.
+
+Agency Relationship
+Agency relationship is the fundamental dimension of agency
+play, and refers to a function, always situated in a particular context, describing the relative magnitude of and dependence relationship existing between:
+• a set of actions allowed (by the system) to be executed by
+a user
+• a set of actions allowed to be executed by the system.
+• user desire or need to perform actions,
+• user sense of meaningful possible actions, and
+• a range of possible user interpretations of actions.
+We focus on the ﬁrst two aspects of the function above,
+with the understanding that the latter three aspects determine
+the expressive qualities of the agency relationship. Relative
+magnitude refers to the relative degree of possible user actions to system imposed constraints, especially constraints
+upon actions that would usually be enacted by the user in
+the story world.
+Dependence between player and system control over actions operate vary greatly.Primary models include cases
+where user and system agency are 1) independent, 2) inversely dependent, 3) interdependent. Of course, standard
+characters that are transparently controllable by a human
+player and characters that are controlled solely by the system operate independently. Independent user agency in interactive narrative works usually refers to the ability of the
+player to take meaningful actions in a story world. The
+ability to cause a character to move, acquire artifacts, and
+interact with other players or non-player characters (NPC)
+reﬂects this sense of player agency. Yet, user agency can
+also operate along dimensions outside of the story world
+such as in-game camera control. The “meaningfulness” of
+player actions most often arises from the degree to which a
+
+Agency Play
+Agency play engages multiple aspects of agency during runtime in expressive ways that reinforce the authorially intended meanings of the narrative. Agency play is not merely
+strategically limiting user control. It focuses on leveraging
+the relationship between the user and system in order to create a story world that is meaningful and engaging for users
+to participate in. Incorporation of a range of agency effects
+in interactive narrative is similar to the step that ﬁlm makers took last century when they discovered that camera angle, framing, and take length were all effective storytelling
+mechanisms, not just coincidental properties of the medium.
+This section deﬁnes what we see as promising dimensions of
+expressive use of agency and provides illustrative examples.
+Accordingly, we offer the following layers of agency play,
+each of which can be used expressively to convey meaning:
+
+48
+
+player’s actions express intentionality, or aboutness, in the
+story world, and the ability of player determined actions to
+affect the world and progress in a narrative. Thus, control
+over character actions that do not have any signiﬁcant narrative effect are commonly described as providing the player
+with a low degree of agency. Simultaneously, moving a camera in a proper way may reveal to the player a necessary
+object in the game world for progressing the narrative, an
+example in which a non-story world action provides a meaningful story world result. As we have argued above, the notion of meaningful agency relies upon situated construal of
+possible user actions.
+Independent system agency can refer to narration of
+the system as being capable of autonomously carrying out
+human-like actions. For example, Rafael Perez’s system
+MEXICA has been described as an automatic storytelling
+system(P´erez y P´erez & Aliseda 2006). MEXICA itself exhibits system agency by doing the “telling.”
+The IMPROV system by Ken Perlin and Athomas Goldberg, which was developed to allow for the scripting of semiautonomous characters that expressed their own behaviordriven goals and states, provides a good case with which to
+describe inverse dependence (Perlin & Goldberg 1996). For
+example, one could say that the more an Improv-based character can take action in a story world without direction of a
+player, the more system agency and less player agency is exhibited. The 2005 strategy game Civilization IV, on the other
+hand, represents a different correlation. When the agency of
+the player increases in the game as she or he gains more resources (money, weapon, technology, etc), so does agency of
+the system because it controls more NPCs with increased capability, and the system must coordinate a more complicated
+set of game world events at large. This represents a type
+of interdependence. Likewise, a system could implement a
+subset of playable characters that are semi-autonomous, requiring only high level direction from a player. In this case
+the control of character action also displays an interdependent relationship. All three types of dependency articulated
+above are meant only to sketch useful points along a range
+of possibilities, rather than to exhaustively list every possible type of dependence between user and system control of
+situated action.
+
+ever, the variability in the generated output in terms of both
+media elements invoked and rhetorical model is great. The
+contrast, in this case, between low local player agency and
+high global player agency can be read as a commentary on
+pervasive power of ideologies.
+
+Agency Dynamics
+The nature of a given agency relationship and the scope of
+agency impact can vary over time. In this case, we say that
+there is a play of agency dynamics. If these dynamics are
+orchestrated in order to express a theme such as the increasing emotional maturity of a character, then agency play has
+become an expressive resource varying according to runtime
+aesthetic dictates. Stories that contain ﬁxed level of agency
+relationship and agency scope throughout runtime, which
+could be a conscious and expressive design decision in its
+own right, have static agency dynamics.
+One space to explore the dynamics between player agency
+and system agency is through semi-autonomous player characters (SPCs). In the domains of interactive narrative and
+gaming, characters are often categorized as PCs or NPCs.
+PCs are often presented as avatars entirely controlled by
+players, whereas NPCs embrace system autonomy and are
+not usually subject to player command. Although most
+characters fall into one or the other category, some incorporate traits of both. For instance, some PCs may convey
+their impatience by foot-tapping or may smile when receiving power-ups. Our current work (Zhu & Harrell 2008b;
+2008a) explores how to algorithmically adjust agency dynamics in SPCs with a goal to express our view of the relationship between human and machines(AI). In the Memory,
+Reverie Machine project (formerly called the Daydreaming
+Machine)that is described in the next section, both the relationship between player and system agency and their respective scope level changes as required by the story and
+character development over time.
+
+User Input Direction
+All the above levels of agency can be directed by user input.
+For example, in Pac-Man 2: The New Adventures the player
+does not directly control the PC, but can direct his attention
+toward certain objects or tasks (which the character sometimes refuses). This is used expressively to provide a sense
+of personality to the PC, at the same time as providing a
+necessary constraint on possible actions. In Terminal Time,
+described above, the player interaction to determine the slant
+(e.g. feminist or technocentric) is minimal, the audience collectively answers a set of multiple choice questions. However, the user input is what offers players the strong sense of
+global agency in the piece.
+The model presented above is our preliminary effort to
+carefully present a model of agency that includes often overlooked agency phenomena, towards the development of theory for design of interactive narrative systems. The account
+of all four dimensions above certainly is not comprehensive,
+and the examples do not cover the entire area of expressive
+possibilities. Each is an area ripe for further exploration.
+Our modest goal here is to present a new approach to con-
+
+Agency Scope
+The concept of agency scope describes the impact and narrative focus of user and system actions, ranging from immediate and local impact, such as spatial navigation ability,
+to less immediately apparent but more global results, such
+as shaping the narrative structure itself. Either side of the
+agency scope spectrum can be used effectively to convey
+meanings in addition to the actual narrative.
+We have already seen how Shadow of the Colossus deploys a high degree of local player agency with a low degree
+of global player agency to render the sense of fate and helplessness. An opposite practice can be found in the interactive narrative documentary Terminal Time (Mateas 2002). In
+this work, users only have very low local agency through the
+one-dimensional control mechanism (volume of the clapping sound) with very few multiple choice questions. How-
+
+49
+
+to the conceptual integration of multiple concepts according
+to a set of cognitively-inspired optimality principles. In this
+case, modiﬁer-noun phrases, some of the simplest indicators
+of conceptual blends, are the ﬁnal result of an underlying
+process that is semantic, not lexical.
+The scope of impact of user actions, besides their immediate consequences and longer-range effects on the current
+story world, can also manifest itself through the emotional
+tone of the blends and selection of particular memories
+episodes, both determined by the emotional state of SPC.
+In the sample output, the user directed action to “punch” the
+door open does not only allow the SPC to enter the room
+(local agency), or only inform later interaction related to his
+experience in the room (global) via a history of actions, but
+also moves the SPC’s emotion state into “anger” (currently
+implemented using a simple ﬁnite state machine), which inﬂuences the emotional tone of blends and memories in both
+immediately and in the longer term future. The “emotional
+state” of SPC may also inﬂuence the dynamics of the agency
+relationship. If the SPCs “anger” state value is very high,
+for instance, he may favor system agency more by refusing
+to carry on user’s command, or performing the action petulantly or aggressively.
+Although the system is capable of generating highly variable output, certain moments in the stories are designed to
+have low global agency in order to achieve expressive goals.
+For instance, in another short narrative sequence of MRM
+output, the protagonist SPC is a cleaning robot working in a
+kitchen. The beginning of the narrative offers a great variety
+of tasks to the SPC, and user choice of action results detailed
+description of the action’s results. However, as the story
+continues, and the character gains more domestic work experience in the story world, both the number of options and
+degree of detail decrease. In one particular moment, the user
+has to repeatedly choose between “wiping” a dish and “rubbing” a dish, two closely related actions, yet the outcome
+remains unchangeable. The aesthetic choice of emphasizing (limited) local agency over (even more) limited global
+agency in this particular movement of the narrative is set
+to contrast with previously encountered narrative sequences
+that incorporated a higher magnitude of user agency relative
+to system agency, and therefore conveys the emotion state of
+the character: boredom with a repetitive daily job, as well as
+a sense of conﬁnement and powerlessness. The sundry moment is meant to evoke a sense of pathos and meaninglessness while completing a neverending list of sundry chores.
+These dimensions of agency play are all guided by user
+input direction, i.e. they are mediated by patterns of user
+input. A repeated series of user choices reinforces the SPCs
+emotional state and patterns of behavior thus impact the system’s style of narration, the character’s action performed, the
+short and long term impact of actions, and dynamic changes
+in the degree of user control versus system control.
+
+sidering the role of agency in interactive narrative works and
+to provide vocabulary for the discussion.
+
+Case Study: Memory, Reverie Machine
+Our current work on the interactive narrative system the
+Memory, Reverie Machine can be used to illustrate the application of our model of agency play. MRM generates stories of an SPC who oscillates between an objective world of
+events, objects, and actors (Turner 1996), and an affectivelytinted, subjective world of dispositions, memories, reveries,
+and daydreams. The cognitive science theory of conceptual
+blending(Fauconnier 2001) is used to integrate concepts associated with the two worlds using the Alloy algorithm for
+conceptual blending from Harrell’s GRIOT system (Harrell
+2007). Narrative structuring and interaction is also mediated
+using the GRIOT system, with a few extensions technically
+detailed in (Zhu & Harrell 2008a), which also describes the
+goals and theoretical framework of MRM at more length.
+This section focuses on MRM’s deployment of agency
+play through an illustrative sample output in Figure 2. Although our implementation work is at a relatively early
+stage, the sample nevertheless provides material for theoretical analysis and a blueprint for a more generative system
+with each of its narrative components being expanded and
+generated algorithmically.
+MRM explores the relationship between user and system
+agency, both of which impact the SPC’s behaviors in a inversely dependent relationship. More speciﬁcally, the contrast between them is externalized as the proportions of:
+• protagonist actions selected by a user / protagonist actions
+selected by the system
+• the main narrative conveying story world events and results of user selected actions/ narration of memories,
+reveries and daydreams
+• template-based objective description of SPC action / subjective description and affective disposition, generated by
+the Alloy conceptual blending algorithm.
+In the case of Figure 2, the initial action is selected by
+the user, whereas memories, reveries and daydreams are determined by the system, triggered by objects that appear in
+the narrative, and are not directly controllable to the user.
+The system retrieves these “mental activities” of the SPC
+indirectly based on user’s interaction(s), such as the artifacts/characters that she chooses to interact with, and/or dispositions with which actions are performed (e.g. “punch”
+vs. “open gently”). The most intriguing negotiation between system and user, however, occurs where the two are
+conﬂated through blends. Blended descriptions are created
+from mixing properties of “objective” elements directly or
+indirectly chosen by the user (e.g. events, objects, and actors) and affective dispositions of the SPC algorithmically
+determined by the system. For example in the sample output, logical axioms selected from an ontology describing the
+concept “mother” are blended with axioms describing affective concept “anger,” into a “disturbingly familiar” mother.
+It is important to be clear that blending here is not the mere
+concatenation of words to form compound phrases. It refers
+
+Conclusion and Future Work
+Agency play carries with it signiﬁcant narrative risks. User
+expectation for transparent control over user characters can
+be violated. Dynamic agency may cause agents to seem unpredictable in response to user direction. Under such cir-
+
+50
+
+User input contributes
+to the determination
+of Ales' emotional
+state of "anger"
+
+Conceptual blend between domain "room"
+and "anger", reinforced
+by user input "punch"
+
+Conceptual blend between domain "mother"
+and existing emotion
+state"anger"
+
+(ales stopped, computed, and moved again to
+[knock/open/open_gently/punch/open_carelessly] the door ...)
+> PUNCH
+(The door creaked into an entrance.)
+(the funny noise reminds him of)
+(the hospitals, the junkyards, he went to frequently)
+(, which was so unpleasant that he always avoided it ever since,
+ohhh, the same noise.)
+(he paused a bit before he walked in.)
+(the bothersome light room looked somewhat like the room he
+was born.)
+(his disturbingly familiar mother probably had left him quite
+early.)
+(most of his knowledge about her came more from)
+(the engineer pointing to the women in pictures)
+(his memories of experiences.)
+(the things she liked to wear, the way she smiled.)
+
+Memory text
+triggered by
+the keyword
+"creaked"
+
+Memory text
+triggered by the
+keyword "born"
+
+Figure 2: Preliminary Sample Output from Memory, Reverie Machine
+works. We believe that riveting new artistic possibilities will
+arise from interactive narrative works in which agency play
+will allow for salient new possibilities of emergent meaning
+and reﬂection on our human conditions.
+
+cumstances user direction may seem less meaningful if it
+is often seemingly ignored by the system. Users may need
+indication of exactly when their agency has given way to
+system agency, and why. Yet, we position agency play as a
+promising expressive tool for interactive narrative. This is
+because the ﬁeld of interactive narrative has matured to the
+stage that users are accustomed to many conventions of interaction and user agency. Self-reﬂexive, challenging, and
+provocative play with such conventions can yield new narrative directions.
+
+References
+Abu-Lughod, L. 1990. The romance of resistance: Tracing
+transformations of power through bedouin women. American Ethnologist 17(1):41–55.
+Ahearn, L. M. 2001. Language and agency. Annual Review
+of Anthropology 30:109–137.
+Aylett, R., and Louchart, S. —2003—. Towards a narrative
+theory for virtual reality. Virtual Reality 7(1):2–9.
+Bogost, I. 2006. Unit Operations. Cambridge, MA: The
+MIT Press.
+Cavazza, M.; Charles, F.; and Mead, S. J. —2001—. Characters in search of an author: Ai-based virtual storytelling.
+In Virtual Storytelling Using Virtual Reality Technologies
+for Storytelling. Berlin / Heidelberg: Springer. 145–154.
+Davidson, D. 2001. Agency. Oxford, UK: Oxford University Press. 43–62.
+Fauconnier, G. 2001. Conceptual blending and analogy.
+In Gentner, D.; Holyoak, K. J.; and Kokino, B. N., eds.,
+The Analogical Mind: Perspectives from Cognitive Science. Cambridge, MA: MIT Press.
+Foucault, M. 1977. Discipline and Punish. New York:
+Pantheon.
+Foucault, M. 1978. The History of Sexuality, Vol. I: An
+Introduction, volume 1. New York: Pantheon.
+Giddens, A. 1979. Central Problems in Social Theory:
+Action, Structure and Contradiction in Social Analysis.
+Berkeley: University of California Press.
+Goguen, J.
+2003.
+Theories of technology and
+science course notes section 6.
+http://wwwcse.ucsd.edu/ goguen/courses/275/s6.html.
+Harrell, D. F. 2006. Walking blues changes undersea:
+Imaginative narrative in interactive poetry generation with
+
+User agency is often seen as the crucial distinction between interactive narratives and more “conventional” narratives. User agency is not a monolithic phenomenon, however, and it can be harnessed to support story content and
+narration. Rather than viewing the goal of interactive narrative works as the maintenance of a coherent story in light
+of the capricious will of the user, our future exploration includes developing constraints that change over time to control users’ abilities to take free action, to affect overarching
+narratives, and to direct the emotions and behavior of virtual characters. Any narrative thematically engaging control, fate, self-determination, and much more could deploy
+agency play as a metaphor for the relevant theme.
+Future work consists of further reﬁning our preliminary
+model of agency play and expanding the new narrative components of MRM to be more generative. MRM is designed,
+in part, for inquiry into what we see as especially promising
+avenues for research into agency play. As in (Zhu & Harrell 2008a), technical tools can be created to afford agency
+play in digital narratives. We ﬁnd that a theoretical account
+of narration of intentionality is necessary for this endeavor
+and that explicitly representing and manipulating semantic
+content of media (e.g. generating metaphors in text, modular graphics, or multimedia via conceptual blending (Harrell
+2007)) will provide the technical framework necessary for
+implementing various readings of agency and intentionality within narrative systems. This paper reﬂects our ﬁrst attempt at articulating dynamic possibilities for engaging the
+interplay of user and system agency in interactive narrative
+
+51
+
+Zhu, J., and Harrell, D. F. 2008a. Daydreaming with intention: Scalable blending-based imagining and agency in
+generative interactive narrative. In Proceedings of AAAI
+2008 Spring Symposium on Creative Intelligent Systems,
+156–162. AAAI Press.
+Zhu, J., and Harrell, D. F. 2008b. Narrating artiﬁcial daydreams, memories, reveries: Toward scalable intentionality
+in expressive artiﬁcial intelligence practice. In Electronic
+Literature Organization Conference.
+
+the griot system. In AAAI 2006 Workshop in Computational Aesthetics: Artiﬁcial Intelligence Approaches to
+Happiness and Beauty. Boston, MA: AAAI Press.
+Harrell, D. F. 2007. Theory and Technology for Computational Narrative: An Approach to Generative and Interactive Narrative with Bases in Algebraic Semiotics and Cognitive Linguistics. Dissertation, University of California,
+San Diego.
+Juul, J. 2001. Games telling stories? Game Studies 1(1).
+Latour, B. 1996. Aramis, or the Love of Technology. Cambridge: Harvard University Press.
+Louchart, S., and Aylett, R. —2003—. Solving the narrative paradox in ves - lessons from rpgs. In Rist, T.; Aylett,
+R.; Ballin, D.; and Rickel, J., eds., Intelligent Virtual
+Agents: 4th International Workshop, 244–248. Springer.
+LucasArts. 2003. Star wars: Knights of the old republic
+(xbox).
+Mateas, M., and Stern, A. 2002. A behavior language
+for story-based believable agents. IEEE Intelligent Systems
+17(4):39–47.
+Mateas, M. 2002. Interactive Drama, Art, and Artiﬁcial
+Intelligence. Ph.D. Dissertation, CMU.
+Meehan, J. 1976. The Metanovel: Writing Stories by Computer. Ph.d., Yale University.
+Montfort, N. 2007. Ordering events in interactive ﬁction
+narratives on intelligent narrative technologies. In AAAI
+2007 Fall Symposium on Intelligent Narrative Technologies, 87–94. AAAI Press.
+Murray, J. H. 1998. Hamlet on the Holodeck: The Future
+of Narrative in Cyberspace. Cambridge: The MIT Press.
+P´erez y P´erez, R., and Aliseda, A. 2006. The role of
+abduction in automatic storytelling. In Proceedings of
+the AAAI workshop in Computational Aesthetics, 53–60.
+AAAI Press.
+Perlin, K., and Goldberg, A. 1996. Improv: a system
+for scripting interactive actors in virtual worlds. Computer
+Graphics 29(3).
+Pickering, A. 1995. The Mangle of Practice. University of
+Chicago Press.
+Ryan, M.-L. 2001. Beyond myth and metaphor: The case
+of narrative in digital media. Game Studies 1(1).
+Sega. 2000. Shenmue.
+Segal, J. M. 1991. Agency and Alienation: A Theory of
+Human Presence. Lanham MD: Rowman & Littleﬁeld.
+Sony Computer Entertainment. 2005. Shadow of the colossus (playstation 2).
+Turner, M. 1996. The Literary Mind: The Origins of
+Thought and Language. New York; Oxford: Oxford UP.
+Weyhrauch, P. 1997. Guiding Interactive Drama. Ph.D.
+Dissertation, Carnegie Mellon University.
+Young-hae Chang Heavy Industries. 2002. Dakota.
+Young, R. M. 2007. Story and discourse: A bipartite model
+of narrative generation in virtual worlds. Interaction Studies 8(2):177–208.
+
+52
+
+
