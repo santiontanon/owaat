@@ -1,3 +1,22 @@
+/*
+
+  Project: "One Word at a Time"
+  Description:
+    - Project created during the "hackathlon" at the 2015 Dagstuhl seminar on Game AI
+    - Provide papers of a given set of authors to train a set of language models of such authors. The
+      system then uses the language models to play the "one word at a time" game.
+    - The language model consists of two parts:
+        - a low-level Markov chain model (2-grams)
+        - a high-level grammar represented as a finite state machine to provide structure to the generates sentences.
+
+  Authors:
+    Jichen Zhu
+    Santiago Ontanon
+    Brian Magerko
+
+*/
+
+
 import rita.*;
 
 // Player configuration:
